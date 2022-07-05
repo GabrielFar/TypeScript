@@ -1,35 +1,35 @@
-var temps: number[] = []
-var out = document.querySelector("#idOut") as HTMLOutputElement
-var soma = 0
-var btGuardar = document.querySelector("#idBtGuardar") as HTMLButtonElement
-var btConsultar = document.querySelector("#idBtConsultar") as HTMLButtonElement
+var temps: number[] = [];
+var out = document.querySelector("#idOut") as HTMLOutputElement;
+var soma = 0;
+var btGuardar = document.querySelector("#idBtGuardar") as HTMLButtonElement;
+var btConsultar = document.querySelector("#idBtConsultar") as HTMLButtonElement;
 
 btGuardar.onclick = function(): void {
-    let temp = document.querySelector("#idTemp") as HTMLInputElement
-    let temperatura = Number(temp.value)
-    temps.push(temperatura)              
-    soma = soma + temperatura
-    temp.value = ""
+    let temp = document.querySelector("#idTemp") as HTMLInputElement;
+    let temperatura = Number(temp.value);
+    temps.push(temperatura);
+    soma = soma + temperatura;
+    temp.value = "";
 }
 
 btConsultar.onclick = function(): void {
     
-    let diaOBJ = document.querySelector("#idDia") as HTMLInputElement
-    let dia = Number(diaOBJ.value)
-    let media = soma / temps.length
-    let diaSelecionado = temps[(dia - 1)]
-    let valor
+    let diaOBJ = document.querySelector("#idDia") as HTMLInputElement;
+    let dia = Number(diaOBJ.value);
+    let media = soma / temps.length;
+    let diaSelecionado = temps[(dia - 1)];
+    let valor;
 
     for (let i = 0; i < temps.length; i++) {
         
         if (diaSelecionado > media) {
-            valor = "superior"
+            valor = "superior";
         } else if (diaSelecionado < media) {
-            valor = "inferior"
+            valor = "inferior";
         } else if (diaSelecionado == media) {
-            valor = "igual"
+            valor = "igual";
         }
     }
     
-    out.value = "No dia " + dia + " a temperatura foi " + valor + " à media " + media
+    out.value = "No dia " + dia + " a temperatura foi " + valor + " à media " + media;
 }
