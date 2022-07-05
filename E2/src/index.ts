@@ -4,7 +4,7 @@ var soma = 0
 var btGuardar = document.querySelector("#idBtGuardar") as HTMLButtonElement
 var btConsultar = document.querySelector("#idBtConsultar") as HTMLButtonElement
 
-btGuardar.onclick = function() {
+btGuardar.onclick = function(): void {
     let temp = document.querySelector("#idTemp") as HTMLInputElement
     let temperatura = Number(temp.value)
     temps.push(temperatura)              
@@ -12,7 +12,7 @@ btGuardar.onclick = function() {
     temp.value = ""
 }
 
-btConsultar.onclick = function() {
+btConsultar.onclick = function(): void {
     
     let diaOBJ = document.querySelector("#idDia") as HTMLInputElement
     let dia = Number(diaOBJ.value)

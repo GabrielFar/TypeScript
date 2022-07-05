@@ -29,16 +29,16 @@ btConverter.onclick = function(){
     }
     
 
-    function converCelsius(temperatura:number) {
+    function converCelsius(temperatura:number): string {
 
-        let converFah = (9 * temperatura) + 160/5
+        let converFah = ((9 * temperatura) + 160)/5
         let converKel = (temperatura + 273.15)
         let conversãoFinal: string = "Temperaturas - Kelvin: " + converKel.toFixed(2) + " - Fahrenheit: " + converFah.toFixed(2)
 
         return conversãoFinal
     }
 
-    function converFahrenheit(temperatura:number) {
+    function converFahrenheit(temperatura:number): string {
         
         let converCel = (5 * temperatura - 160)/9
         let converKel = (temperatura - 32) * 5/9 + 273.15
@@ -47,7 +47,7 @@ btConverter.onclick = function(){
         return conversãoFinal
     }
 
-    function converKelvin(temperatura:number) {
+    function converKelvin(temperatura:number): string {
         
         let converCel = (temperatura - 273.15)
         let converFah = (temperatura - 273.15) * 9/5 + 32
