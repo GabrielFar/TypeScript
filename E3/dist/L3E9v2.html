@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Área</title>
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+    <form action="">
+        <label for="idNum">Insira as medidas necessárias</label><br>
+        <input type="number" id="idNum" name="nmNum" step="0.01">
+        <br><br>
+
+        <input type="radio" id="idCir" name="nmForma" checked>
+        <label for="idCir">Círculo</label>
+        <br>
+        <input type="radio" id="idRet" name="nmForma">
+        <label for="idRet">Retângulo</label>
+        <br>
+        <input type="radio" id="idTriR" name="nmForma">
+        <label for="idTriR">Triângulo Retângulo</label>
+        <br>
+        <input type="radio" id="idTriE" name="nmForma">
+        <label for="idTriE">Triângulo Equilátero</label>
+        <br><br>
+
+        <button type="button" id="idBtLer">Ler Número</button>
+        <br><br>
+        <button type="button" id="idBtCalcular">Calcular</button>
+        <br><br>
+        
+        <output id="idOut">Área: </output> 
+    </form>
+</body>
+</html>
