@@ -11,7 +11,18 @@ class Pessoa {
     }
     calculaIdade() {
         let data = new Date();
-        return this.idade = data.getFullYear() - this.anoNasc;
+        let ano = data.getFullYear();
+        let mes = data.getMonth();
+        let dia = data.getDay();
+        this.idade = Number(ano) - this.anoNasc;
+        if (Number(mes) == this.mesNasc) {
+            if (Number(dia) > this.diaNasc) {
+                this.idade + 1;
+            }
+        }
+        else if (Number(mes) > this.mesNasc) {
+            this.idade + 1;
+        }
     }
     getIdade() {
         return this.idade;

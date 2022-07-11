@@ -13,10 +13,22 @@ export class Pessoa{
         this.nome = nome;
     }
 
-    public calculaIdade(): number{
+    public calculaIdade(): void{
         let data = new Date()
+        let ano = data.getFullYear()
+        let mes = data.getMonth()
+        let dia = data.getDay()
         
-        return this.idade = data.getFullYear() - this.anoNasc
+        this.idade = Number(ano) - this.anoNasc        
+        
+        if (Number(mes) == this.mesNasc) {
+            if (Number(dia) > this.diaNasc) {
+                this.idade + 1
+            }
+
+        } else if(Number(mes) > this.mesNasc){
+            this.idade + 1
+        }
     }
 
     public getIdade(): number{
