@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document
+        </title>
+        <script>var exports = {};</script>
+        <script src="js/Cliente.js" defer></script>
+        <script src="js/ItemPedido.js" defer></script>
+        <script src="js/Pedido.js" defer></script>
+        <script src="js/app.js" defer></script>
+        <style>
+            section{
+                height: 100vh;
+            }
+
+            html, body{ 
+                overflow: hidden
+            }
+        </style>
+    </head>
+    <body>
+        <section id="idCadastro">
+            <label for="idNome">Nome:</label><br>
+            <input type="text" id="idNome" autofocus>
+            <br><br>
+
+            <label for="idCPF">CPF:</label><br>
+            <input type="text" id="idCPF">
+            <br><br>
+
+            <label for="idTelefone">Telefone:</label><br>
+            <input type="text" id="idTelefone">
+            <br><br>
+
+            <label for="idRG">RG:</label><br>
+            <input type="text" id="idRG">
+            <br><br>
+            <a href="#idPedido">
+                <button id="idBtSalvar">Selecionar Itens de Pedido</button>
+            </a>            
+            <br><br>
+        </section>
+
+        <section id="idPedido">
+            <label for="idItens">Itens:</label><br>
+            <select id="idItens">
+                <option id="idItem1" value="001">Item1</option select>
+                <option id="idItem2" value="002">Item2</option>
+                <option id="idItem3" value="003">Item3</option>
+                <option id="idItem4" value="004">Item4</option>
+                <option id="idItem5" value="005">Item5</option>
+            </select>
+            <br><br>
+
+            <label for="idQntd">Quantidade:</label><br>
+            <input type="number" id="idQntd" min="0" value="1">
+            <br><br>
+
+            <button id="idBtAddCarinho">Adicionar item ao Carinho</button><br><br>
+            <a href="#idTabelaPedido">
+                <button id="idBtRealizarPedido">Realizar Pedido</button>
+            </a><br><br>
+            <a href="#idCadastro">
+                <button>Voltar</button>
+            </a>             
+        </section>
+
+        <section id="idTabelaPedido">
+            <output id="idNomeCliente"></output>
+            <output id="idCPFCliente"></output>
+            <output id="idTelefoneCliente"></output>
+            <output id="idRGCliente"></output>
+            <output id="idCodPedido"></output>
+
+            <output id="idOut">
+                <table id="idTable">
+                    <thead id="idTableHead">
+                        <tr class="clTrPedidoHead">
+                            <th class="clThCódigo">Código</th>
+                            <th class="clThDescrição">Descrição</th>
+                            <th class="clThQnt">Qntd</th>
+                            <th class="clThValor">Valor</th>
+                        </tr>
+                    </thead>
+                    <tfoot id="idTableFoot">
+                        <tr class="clTrPedidoFoot">
+                            <th>Total</th>
+                            <th></th>
+                            <th></th>
+                            <th class="clThValorTotal"></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </output>
+            <br><br>
+            <a href="#idPedido">
+                <button id="idBtSalvarCliente">Voltar</button>
+            </a>
+        </section>
+    </body>
+</html>
